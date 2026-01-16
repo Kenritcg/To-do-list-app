@@ -24,7 +24,7 @@ class _TaskPageState extends State<TaskPage> {
         .size
         .width;
     return Scaffold(
-      backgroundColor: Colors.purple[50],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: IconButton(
@@ -32,7 +32,7 @@ class _TaskPageState extends State<TaskPage> {
           onPressed: () => Navigator.of(context).maybePop(),
         ),
         title: const Text(
-          "Daily Planner",
+          "TO DO LIST",
           style: TextStyle(
             fontSize: 26,
             fontWeight: FontWeight.bold,
@@ -41,7 +41,7 @@ class _TaskPageState extends State<TaskPage> {
           ),
         ),
         toolbarHeight: _deviceHeight! * 0.1,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue.shade100,
         elevation: 8,
         shadowColor: Colors.black.withOpacity(0.3),
         centerTitle: true,
@@ -49,7 +49,7 @@ class _TaskPageState extends State<TaskPage> {
       body: _taskWidget(),
       floatingActionButton: FloatingActionButton(
         onPressed: displayTaskPop,
-        backgroundColor: Colors.blue.shade100,
+        backgroundColor: Colors.white,
         elevation: 8,
         child: const Icon(Icons.add, size: 28, color: Colors.white),
       ),
@@ -98,4 +98,5 @@ class _TaskPageState extends State<TaskPage> {
       },
     );
   }
+
 }
